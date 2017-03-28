@@ -35,8 +35,8 @@ Commit and Push new changes on your Andriod project on BitBucket and you should 
 # Links
 More information can be found on the following links:
 
-1. [jenkinsci/docker offical docker image](https://github.com/jenkinsci/docker)
-2. [Jenkins Job YMAL file definition](https://docs.openstack.org/infra/jenkins-job-builder/definition.html#modules)
+1. [Jenkinsci offical docker image](https://github.com/jenkinsci/docker)
+2. [Jenkins job ymal file definition](https://docs.openstack.org/infra/jenkins-job-builder/definition.html#modules)
 3. [BitBucket: build after each commit](https://www.youtube.com/watch?v=nNaR5Q_pIa4)
 4. [Do it yourself maually](https://www.digitalocean.com/community/tutorials/how-to-build-android-apps-with-jenkins)
  
