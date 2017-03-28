@@ -5,27 +5,27 @@ Docker container to automatically install and configure Jenkins to build Android
 
 # Building
 Clone the project to your directory
-```sh
-    git clone https://github.com/Ismail-AlJubbah/jenkins-android-bitbucket
+```bash
+git clone https://github.com/Ismail-AlJubbah/jenkins-android-bitbucket
 ```
 Edit the file `android_bitbucket.yml` under -git url paste your BitBucket Repository URL
 ```yml
-    - git:
-        url: [YOUR BitBucket Repository URL]
+  - git:
+      url: [YOUR BitBucket Repository URL]
 ```
 Then build the image
-```shell
-    docker build -t jubba/jenkins-android:latest .
+```bash
+docker build -t jubba/jenkins-android:latest .
 ```
 # Running
 Run this command to run the container 
-```sh
-    docker run -d -p 80:8080 -u=root --name jnks -v jenkins_home:/var/jenkins_home jubba/jenkins-android
+```bash
+docker run -d -p 80:8080 -u=root --name jnks -v jenkins_home:/var/jenkins_home jubba/jenkins-android
 ```
 Run this command to setup Jenkins job and get the admin password
-```sh
-    docker exec -it jnks /opt/initJob.sh
- ```
+```bash
+docker exec -it jnks /opt/initJob.sh
+```
 # Setting on your BitBucket Repo
 Go to your BitBucket reposotoriy Settings -> Webhook, input the title and the url as `http://YOUR-Jenkins-Public-IP/bitbucket-hook/` then save
 <img src="http://static.imljh.com/bitbucket.png">
@@ -33,7 +33,7 @@ Go to your BitBucket reposotoriy Settings -> Webhook, input the title and the ur
 Commit and Push new changes on your Andriod project on BitBucket and you should see new build running on Jenkins Job, the new generated APK should found on `Last Successful Deployed Artifacts` with the following format `date:time_build-number.apk`
 <img src="http://static.imljh.com/jenkins_job.png">
 # Links
-more information can be found on the following links:
+More information can be found on the following links:
 
 1. [jenkinsci/docker offical docker image](https://github.com/jenkinsci/docker)
 2. [Jenkins Job YMAL file definition](https://docs.openstack.org/infra/jenkins-job-builder/definition.html#modules)
