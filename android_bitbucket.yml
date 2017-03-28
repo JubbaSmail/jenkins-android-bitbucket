@@ -1,0 +1,26 @@
+---
+- job:
+    name: android_bitbucket_autobuild
+    project-type: freestyle
+    description: Automatically build Android APK after every commit on BitBucket repository
+    scm:
+      - git:
+          url: https://bitbucket.org/IJubba/sampleandroid.git
+          branches:
+            - master
+    triggers:
+      - bitbucket
+    builders:
+      - inject:
+          properties-content: ANDROID_HOME=/opt/android-sdk-linux
+      - gradle:
+          wrapper: true
+          tasks: |
+                 clean
+                 assembleDebug
+      - shell: "mv app/build/outputs/apk/app-debug.apk app/build/outputs/apk/`date +%Y-%m-%d:%H:%M:%S`_${BUILD_ID}.apk"
+    publishers:
+      - artifact-deployer:
+          entries:
+            - files: 'app/build/outputs/apk/*.apk'
+              remote: '/builds/sample-app/'
