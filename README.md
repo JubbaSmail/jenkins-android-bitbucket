@@ -5,23 +5,27 @@ Docker container to automatically install and configure Jenkins to build Android
 
 # Building
 Clone the project to your directory
-
+```bash
     git clone https://github.com/Ismail-AlJubbah/jenkins-android-bitbucket
+```
 Edit the file `android_bitbucket.yml` under -git url paste your BitBucket Repository URL
-
+```yml
     - git:
         url: [YOUR BitBucket Repository URL]
+```
 Then build the image
-
+```bash
     docker build -t jubba/jenkins-android:latest .
+```
 # Running
 Run this command to run the container 
-
+```bash
     docker run -d -p 80:8080 -u=root --name jnks -v jenkins_home:/var/jenkins_home jubba/jenkins-android
-
+```
 Run this command to setup Jenkins job and get the admin password
-
+```bash
     docker exec -it jnks /opt/initJob.sh
+ ```
 # Setting on your BitBucket Repo
 Go to your BitBucket reposotoriy Settings -> Webhook, input the title and the url as `http://YOUR-Jenkins-Public-IP/bitbucket-hook/` then save
 <img src="http://static.imljh.com/bitbucket.png">
