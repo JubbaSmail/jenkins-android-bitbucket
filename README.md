@@ -11,7 +11,7 @@ git clone https://github.com/Ismail-AlJubbah/jenkins-android-bitbucket
 Edit the file `android_bitbucket.yml` under -git url paste your BitBucket Repository URL
 ```yml
 - git:
-    url: [YOUR BitBucket Repository URL]
+    url: [YOUR BitBucket Repository Public URL]
 ```
 Then build the image
 ```bash
