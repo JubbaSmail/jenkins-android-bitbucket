@@ -4,10 +4,10 @@ Docker container to automatically install and configure Jenkins to build Android
 <img width="200" src="http://jenkins-ci.org/sites/default/files/jenkins_logo.png"/><img width="100" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/cc14679984981.560dd8d3aa5e4.png"/><img width="100" src="http://sdtimes.com/wp-content/uploads/2016/07/0722.sdt-atlassian.png"/>
 
 # Building
-clone the project to your directory
+Clone the project to your directory
 
     git clone https://github.com/Ismail-AlJubbah/jenkins-android-bitbucket
-edit the file `android_bitbucket.yml` under -git url paste your BitBucket Repository URL
+Edit the file `android_bitbucket.yml` under -git url paste your BitBucket Repository URL
 
     - git:
         url: [YOUR BitBucket Repository URL]
@@ -22,9 +22,12 @@ Run this command to run the container
 Run this command to setup Jenkins job and get the admin password
 
     docker exec -it jnks /opt/initJob.sh
-# Setting on your BitBucket
-
-
+# Setting on your BitBucket Repo
+Go to your BitBucket reposotoriy Settings -> Webhook, input the title and the url as `http://YOUR-Jenkins-Public-IP/bitbucket-hook/` then save
+<img src="http://static.imljh.com/bitbucket.png">
+# Testing
+Commit and Push new changes on your Andriod project on BitBucket and you should see new build running on Jenkins Job, the new generated APK should found on `Last Successful Deployed Artifacts` with the following format `date:time_build-number.apk`
+<img src="http://static.imljh.com/jenkins.png">
 # Links
 more information can be found on the following links:
 
