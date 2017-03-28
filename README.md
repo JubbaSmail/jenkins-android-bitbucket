@@ -27,7 +27,8 @@ Run this command to setup Jenkins job and get the admin password
 
 # Links
 more information can be found on the following links:
-   -[jenkinsci/docker offical docker image](https://github.com/jenkinsci/docker)
-   -[Jenkins Job YMAL file definition](https://docs.openstack.org/infra/jenkins-job-builder/definition.html#modules)
-   -[Do it your maually](https://www.digitalocean.com/community/tutorials/how-to-build-android-apps-with-jenkins)
+
+1. [jenkinsci/docker offical docker image](https://github.com/jenkinsci/docker)
+2. [Jenkins Job YMAL file definition](https://docs.openstack.org/infra/jenkins-job-builder/definition.html#modules)
+3. [Do it your maually](https://www.digitalocean.com/community/tutorials/how-to-build-android-apps-with-jenkins)
    
