@@ -30,6 +30,7 @@ more information can be found on the following links:
 
 1. [jenkinsci/docker offical docker image](https://github.com/jenkinsci/docker)
 2. [Jenkins Job YMAL file definition](https://docs.openstack.org/infra/jenkins-job-builder/definition.html#modules)
-3. [Do it your maually](https://www.digitalocean.com/community/tutorials/how-to-build-android-apps-with-jenkins)
-4. [BitBucket: build after each commit](https://www.youtube.com/watch?v=nNaR5Q_pIa4)
+3. [BitBucket: build after each commit](https://www.youtube.com/watch?v=nNaR5Q_pIa4)
+4. [Do it yourself maually](https://www.digitalocean.com/community/tutorials/how-to-build-android-apps-with-jenkins)
+ 
    
