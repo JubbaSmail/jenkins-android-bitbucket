@@ -28,9 +28,11 @@ docker exec -it jnks /opt/initJob.sh
 ```
 # Setting on your BitBucket Repo
 Go to your BitBucket reposotoriy Settings -> Webhook, input the title and the url as `http://YOUR-Jenkins-Public-IP/bitbucket-hook/` then save
+
 <img src="http://static.imljh.com/bitbucket.png">
 # Testing
 Commit and Push new changes on your Andriod project on BitBucket and you should see new build running on Jenkins Job, the new generated APK should found on `Last Successful Deployed Artifacts` with the following format `date:time_build-number.apk`
+
 <img src="http://static.imljh.com/jenkins_job.png">
 # Links
 More information can be found on the following links:
