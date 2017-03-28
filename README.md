@@ -14,7 +14,6 @@ edit the file `android_bitbucket.yml` under -git url paste your BitBucket Reposi
 Then build the image
 
     docker build -t jubba/jenkins-android:latest .
-
 # Running
 Run this command to run the container 
 
@@ -23,3 +22,12 @@ Run this command to run the container
 Run this command to setup Jenkins job and get the admin password
 
     docker exec -it jnks /opt/initJob.sh
+# Setting on your BitBucket
+
+
+# Links
+more information can be found on the following links:
+   -[jenkinsci/docker offical docker image](https://github.com/jenkinsci/docker)
+   -[Jenkins Job YMAL file definition](https://docs.openstack.org/infra/jenkins-job-builder/definition.html#modules)
+   -[Do it your maually](https://www.digitalocean.com/community/tutorials/how-to-build-android-apps-with-jenkins)
+   
