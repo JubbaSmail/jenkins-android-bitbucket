@@ -1,7 +1,8 @@
 FROM jenkins
 
 USER root
-RUN /usr/local/bin/install-plugins.sh bitbucket gradle envinject artifactdeployer
+RUN /usr/local/bin/install-plugins.sh bitbucket gradle envinject 
+#artifactdeployer
 RUN apt-get update && apt-get install -y wget git-core python-setuptools python-pip
 RUN mkdir -p /opt/android-sdk-linux && cd /opt/android-sdk-linux &&  wget https://dl.google.com/android/repository/tools_r25.2.3-linux.zip
 RUN cd /opt/android-sdk-linux && ls -la && unzip tools_r25.2.3-linux.zip

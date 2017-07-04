@@ -19,9 +19,9 @@
                  clean
                  assembleDebug
       - shell: "mv app/build/outputs/apk/app-debug.apk app/build/outputs/apk/`date +%Y-%m-%d:%H:%M:%S`_${BUILD_ID}.apk"
-    publishers:
-      - artifact-deployer:
-          entries:
-            - files: 'app/build/outputs/apk/*.apk'
-              remote: '/builds/sample-app/'
-              flatten: true
+#    publishers:
+#      - artifact-deployer:
+#          entries:
+#            - files: 'app/build/outputs/apk/*.apk'
+#              remote: '/builds/sample-app/'
+#              flatten: true
